@@ -1,0 +1,5 @@
+name: EnchantCursePack
+version: ${project.version}
+main: me.hsgamer.enchantcursepack.EnchantCursePack
+depend: [EnchantmentAPI]
+authors: [HSGamer]
