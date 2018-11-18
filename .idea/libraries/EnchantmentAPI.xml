@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="EnchantmentAPI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../EnchantmentAPI/out/artifacts/EnchantmentAPI_jar/EnchantmentAPI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
