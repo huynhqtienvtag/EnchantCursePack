@@ -21,15 +21,15 @@ public class Fire extends CustomEnchantment {
         setMaxLevel(1, 1);
         setWeight(2);
         settings.set(FREQUENCY, 5, 0);
-        settings.set(TICK, 10);
+        settings.set(TICK, 10, 0);
 
         addNaturalItems(ItemSet.ARMOR.getItems());
     }
 
     public void applyEquip(LivingEntity user, int level) {
-        int frequency = (int) settings.get(FREQUENCY, level) * 20;
-        int firetick = (int) settings.get(TICK) * 20;
-        tasks.put(user.getUniqueId(), Tasks.schedule(() -> user.setFireTicks(firetick), frequency, frequency));
+        int frequency = (int) settings.get(FREQUENCY, level);
+        int firetick = (int) settings.get(TICK, level);
+        tasks.put(user.getUniqueId(), Tasks.schedule(() -> user.setFireTicks(firetick * 20), frequency * 20, frequency * 20));
     }
 
     public void applyUnequip(LivingEntity user, int level) {
