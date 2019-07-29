@@ -28,7 +28,7 @@ public class Fire extends CustomEnchantment {
 
     public void applyEquip(LivingEntity user, int level) {
         int frequency = (int) settings.get(FREQUENCY, level) * 20;
-        int firetick = (int) settings.getInt(TICK) * 20;
+        int firetick = settings.getInt(TICK) * 20;
         tasks.put(user.getUniqueId(), Tasks.schedule(() -> user.setFireTicks(firetick), frequency, frequency));
     }
 
